@@ -2,6 +2,12 @@ public class Node {
     /*
     This class serves to hold values for the game.
 
+    Constructor:
+    - Parameters:
+       - int destination: sets attribute destination
+    - frontLinkNode: initially set to null
+    - backLinkNode: initially set to null
+
     Attributes: 
     - int destination: holds the destination value of car
         -references positions in RailyardGame.destinations[]
@@ -20,11 +26,11 @@ public class Node {
 
     - Node getBackLinkNode: returns Node backLinkNode
 
-    - Boolean setFrontLinkNode: sets frontLinkNode to provided node.
+    - Boolean setFrontLinkNode(Node front): sets frontLinkNode to provided node.
         - returns true if successful
         - no failure state exists yet 
 
-    - Boolean setBackLinkNode: sets backLinkNode to provided node
+    - Boolean setBackLinkNode(Node back): sets backLinkNode to provided node
         - return true if successful
         - no failure state exists yet
 
@@ -36,9 +42,6 @@ public class Node {
     private final int destination; 
     private Node frontLinkNode;
     private Node backLinkNode;
-
-    //possible implementation later that could be fun but is unimportant:
-    //private String good; a string for what car contains.
 
     ////// Constructor ////// 
     public Node(int destination){ 
@@ -76,12 +79,5 @@ public class Node {
         return true;
     }
 
-    
-    /* ////// ////// Goods Operations ////// ////// possible implement later. not necessary
-     * public String getGoods(){
-     *  return this.goods;
-     * }
-     * 
-    */
 
 }
